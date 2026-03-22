@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buzzlite | Visual Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-card">
+        <img
+          src="https://picsum.photos/120/120"
+          alt="Buzzlite"
+          class="avatar"
+        />
+        <h2 class="name">Juan J. Ortiz</h2>
+        <p class="title">Visual Analytics Specialist </p>
+        <p class="bio">
+          Visualizing data to inspire action and insight.
+        </p>
+        <button class="follow-btn">Follow</button>
+      </div>
+
+      <div class="chart-container">
+        <h2 class="chart-title">My First Barplot</h2>
+        <div id="chart"></div>
+        <div class="chart-labels">
+          <span>Q1</span>
+          <span>Q2</span>
+          <span>Q3</span>
+          <span>Q4</span>
+        </div>
+      </div>
+
+      <blockquote class="quote">
+        "The only way to do great work is to love what you do."
+        <cite>— Steve Jobs</cite>
+      </blockquote>
+    </div>
+    <p> First web ,</p>
+    <script>
+      const data = [120, 200, 80, 260];
+      const chart = document.getElementById("chart");
+      const colors = ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4"];
+
+      data.forEach((value, index) => {
+        const bar = document.createElement("div");
+        bar.className = "bar";
+        bar.style.width = `${value}px`;
+        bar.style.backgroundColor = colors[index];
+        bar.setAttribute("data-value", value);
+        chart.appendChild(bar);
+      });
+    </script>
+  </body>
+</html>
