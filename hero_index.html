@@ -11,41 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="container">
-      <section class="profile-card" aria-labelledby="profile-name">
+    <main>
         <img
           src="./assets/jjoo_bw.JPEG"
           alt="Juan J. Ortiz"
           class="avatar"
-          width="200"
-          height="200"
+          width="400"
+          height="400"
         />
-        <h1 class="name" id="profile-name">Juan J. Ortiz</h1>
-        <p class="bio">
-          Visualizing data to inspire action and insight.
-        </p>
-        <p class="bio">
-            I design and develop data and analytics applications that enrich analysis and inform decisions. 
-            My focus is on <strong>education</strong> and the use of visual analytics to improve academic success.
-        </p>
-      </section>
-      <blockquote class="quote">
-        <p>"The only way to do great work is to love what you do."</p>
-        <cite>— Steve Jobs</cite>
-      </blockquote>
+<canvas class="container" id="container" role="main"></canvas>
+  <div class="content">
+    <h1 class="title">Juan J. Ortiz</h1>
+    <p class="desc">Visual Analytics Specialist</p>
+     <ul class="contact">
+      <li><a href="mailto:juan@ortiz.com">juan@ortiz.com</a></li>
+        <li>
+          <a target="_top" href="https://codepen.io/juanortiz/">Codepen</a></li>
+        <li>
+          <a target="_top" href="https://twitter.com/juanortiz">Twitter</a></li>
+        <li><a target="_top" href="https://linkedin.com/in/juanortiz">LinkedIn</a></li>
+      </ul>
+  </div>
+
     </main>
-    <script src="shapes.js"></script>
-    <script src="shapegenerator.js"></script>
-    <script>
-        generateShapes({
-            element: document.body,
-            options: {
-                colorList: ["#a29bfe","#ff7675","#55efc4","#636e72"],
-                numberOfShapes: 15,
-                mode: 1,
-                rotation: true
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

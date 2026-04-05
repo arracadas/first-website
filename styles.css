@@ -1,193 +1,23 @@
 :root {
-  --primary: #4f46e5; /* Indigo */
-  --secondary: #a5b4fc; /* Light indigo */
-  --dark: #1e1b4b; /* Dark indigo */
-  --light: #f8fafc;
-  --accent: #a5b4fc; /* Lighter indigo accent */
-  --success: #10b981;
+  --primary: #4B0082; /* Indigo */
+  --secondary: #FFD700; /* Soft Gold */
+  --dark: #0A2463; /* Deep Navy */
+  --light: #E6E6FA; /* Pale Lavender */
   --font-main: 'Poppins', sans-serif;
   --font-heading: 'Quicksand', sans-serif;
 }
 
 body {
   font-family: var(--font-main);
-  background-color: #f5f1e8; /* Warm light beige background */
-  color: #333333;
+  background-color: var(--dark); /* Deep Navy background */
+  color: var(--light); /* Pale Lavender text */
   margin: 0;
-  padding: 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
-
-.container {
-  max-width: 800px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-}
-
-.profile-card {
-  background: #6B4457; /* Same as quote card - dark maroon */
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  padding: 35px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: none;
-  position: relative;
-  z-index: 1;
-  color: #FFFFFF; /* White text for contrast */
-}
-
-.profile-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(107, 68, 87, 0.3); /* Maroon glow */
-}
-
-.avatar {
-  border-radius: 50%;
-  border: 4px solid #FFFFFF; /* White border for contrast */
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
-  object-fit: cover;
-  object-position: center top;
-  box-shadow: 0 4px 16px rgba(107, 68, 87, 0.3); /* Maroon shadow */
-}
-
-.profile-card:hover .avatar {
-  border-color: #F5F1E8; /* Light beige border */
-  transform: scale(1.05);
-  box-shadow: 0 8px 32px rgba(107, 68, 87, 0.4); /* Maroon shadow */
-}
-
-.name {
-  margin: 0;
-  color: #FFFFFF; /* White for contrast */
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 32px;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-}
-
-.title {
-  margin: 8px 0 12px 0;
-  color: #F5E6E8; /* Soft pink-beige for subtlety */
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  tracking: 1px;
-}
-
-.bio {
-  color: #E8D5D8; /* Light pink-gray that blends with burgundy */
-  margin-bottom: 20px;
-  line-height: 1.8;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.follow-btn {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: var(--font-main);
-}
-
-.follow-btn:hover {
-  background-color: var(--accent);
-  transform: scale(1.05);
-}
-
-.chart-container {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-}
-
-.chart-title {
-  margin-top: 0;
-  color: var(--primary);
-  font-weight: 600;
-}
-
-#chart {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.bar {
-  height: 40px;
-  border-radius: 5px;
-  transition: width 0.5s ease;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.bar::after {
-  content: attr(data-value);
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.chart-labels {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  color: var(--secondary);
-  font-weight: 500;
-}
-
-.quote {
-  background-color: #6B4457; /* Dark maroon for quote card */
-  border-left: 4px solid #F5F1E8; /* Light beige accent */
-  padding: 25px;
-  margin: 0;
-  font-style: italic;
-  color: #FFFFFF; /* White text */
-  border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.quote:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(107, 68, 87, 0.2); /* Maroon shadow */
-}
-
-cite {
-  color: #F5F1E8; /* Background color for Steve Jobs name */
-  font-weight: 500;
-}
-
-cite {
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
-  color: var(--secondary);
-  font-weight: 500;
-  text-align: right;
+  overflow: hidden;
 }
 
 
@@ -195,4 +25,81 @@ cite {
 /* Simplified layering */
 main {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Avatar styling for hero section */
+.avatar {
+  border-radius: 50%;
+  border: 3px solid var(--secondary); /* Soft Gold border */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); /* Soft Gold glow */
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3; /* Higher than particles (z-index: 0) */
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); /* Enhanced glow on hover */
+  z-index: 4; /* Ensure hover state stays on top */
+}
+
+/* Hero canvas styles */
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 3; /* Same as avatar, above particles */
+  text-align: center;
+  color: var(--light); /* Pale Lavender text */
+  max-width: 800px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin: 10px 0 30px 0;
+  opacity: 0.9;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact li a {
+  color: var(--secondary); /* Soft Gold links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.contact li a:hover {
+  color: var(--primary); /* Indigo on hover */
+  transform: translateY(-2px);
 }
