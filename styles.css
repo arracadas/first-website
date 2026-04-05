@@ -9,59 +9,71 @@
 
 body {
   font-family: var(--font-main);
-  background-color: var(--dark); /* Deep Navy background */
-  color: var(--light); /* Pale Lavender text */
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-/* Simplified layering */
-main {
+/* Hero Section with Background Image */
+.hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('./assets/background_books.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Avatar styling for hero section */
+/* Content Section with Snow Background */
+.content-section {
+  position: relative;
+  width: 100%;
+  background-color: #F8FAFF; /* Snow white */
+  color: var(--dark); /* Deep Navy text */
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+
+
+/* Content container - now inside content-section */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--dark); /* Deep Navy text for snow background */
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Avatar styling for content section */
 .avatar {
   border-radius: 16px; /* Rounded corners for modern look */
   border: none;
-  width: 350px; /* Width */
-  height: 520px; /* Height double the width (140x2 = 280) */
+  width: 140px; /* Width */
+  height: 280px; /* Height double the width (140x2 = 280) */
   object-fit: cover;
   object-position: center top; /* Focus on upper body/face */
-  margin-bottom: 50px; /* Increased spacing for taller image */
-  box-shadow: 0 0 10px rgba(157, 193, 131, 0.4); /* Enhanced Sage Green glow */
+  margin-bottom: 30px; /* Increased spacing for taller image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for snow background */
   transition: all 0.3s ease;
   position: relative;
-  z-index: 3; /* Higher than particles (z-index: 0) */
+  z-index: 2;
 }
 
-.avatar:hover {
-  transform: scale(1.02) translateY(-4px); /* Subtle lift effect for tall image */
-  box-shadow: 0 0 20px rgba(157, 193, 131, 0.5); /* More pronounced Sage Green glow on hover */
-  z-index: 4; /* Ensure hover state stays on top */
-}
-
-/* Hero canvas styles */
-#container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 
 .content {
   position: relative;
@@ -100,13 +112,15 @@ main {
 }
 
 .contact li a {
-  color: var(--secondary); /* Soft Gold links */
+  color: var(--primary); /* Indigo links for snow background */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
 .contact li a:hover {
-  color: var(--primary); /* Indigo on hover */
+  color: var(--secondary); /* Sage Green on hover */
   transform: translateY(-2px);
+  border-bottom: 2px solid var(--secondary);
 }
