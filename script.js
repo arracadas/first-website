@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
             this.speedY = (Math.random() * 0.8 - 0.4); /* Slower vertical speed */
             this.lifetime = Math.random() * 2 + 1; /* 1-3 second lifetime */
             this.age = 0;
-            // Use soft gold and indigo particles for the dark background
+            // Use sage green and indigo particles for the dark background
             this.color = Math.random() > 0.5 
-                ? 'rgba(255, 215, 0, 0.4)' /* Soft Gold #FFD700 */
+                ? 'rgba(157, 193, 131, 0.4)' /* Sage Green #9DC183 */
                 : 'rgba(75, 0, 130, 0.4)'; /* Indigo #4B0082 */
         }
         
