@@ -6,12 +6,13 @@
   --accent: #a5b4fc; /* Lighter indigo accent */
   --success: #10b981;
   --font-main: 'Poppins', sans-serif;
+  --font-heading: 'Quicksand', sans-serif;
 }
 
 body {
   font-family: var(--font-main);
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: #f5f1e8; /* Warm light beige background */
+  color: #333333;
   margin: 0;
   padding: 20px;
   display: flex;
@@ -26,52 +27,70 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
 }
 
 .profile-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  background: #6B4457; /* Same as quote card - dark maroon */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 35px;
   text-align: center;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(79, 70, 229, 0.1);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF; /* White text for contrast */
 }
 
 .profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 28px rgba(79, 70, 229, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(107, 68, 87, 0.3); /* Maroon glow */
 }
 
 .avatar {
   border-radius: 50%;
-  border: 4px solid var(--primary);
-  margin-bottom: 15px;
-  transition: border-color 0.3s ease;
+  border: 4px solid #FFFFFF; /* White border for contrast */
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: 0 4px 16px rgba(107, 68, 87, 0.3); /* Maroon shadow */
 }
 
 .profile-card:hover .avatar {
-  border-color: var(--accent);
+  border-color: #F5F1E8; /* Light beige border */
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(107, 68, 87, 0.4); /* Maroon shadow */
 }
 
 .name {
   margin: 0;
-  color: var(--primary);
+  color: #FFFFFF; /* White for contrast */
+  font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .title {
-  margin: 5px 0;
-  color: var(--secondary);
+  margin: 8px 0 12px 0;
+  color: #F5E6E8; /* Soft pink-beige for subtlety */
+  font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  tracking: 1px;
 }
 
 .bio {
-  color: var(--dark);
+  color: #E8D5D8; /* Light pink-gray that blends with burgundy */
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .follow-btn {
@@ -139,14 +158,27 @@ body {
 }
 
 .quote {
-  background-color: white;
-  border-left: 5px solid var(--accent);
-  padding: 20px;
+  background-color: #6B4457; /* Dark maroon for quote card */
+  border-left: 4px solid #F5F1E8; /* Light beige accent */
+  padding: 25px;
   margin: 0;
   font-style: italic;
-  color: var(--dark);
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  color: #FFFFFF; /* White text */
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.quote:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(107, 68, 87, 0.2); /* Maroon shadow */
+}
+
+cite {
+  color: #F5F1E8; /* Background color for Steve Jobs name */
+  font-weight: 500;
 }
 
 cite {
@@ -156,4 +188,11 @@ cite {
   color: var(--secondary);
   font-weight: 500;
   text-align: right;
+}
+
+
+
+/* Simplified layering */
+main {
+  position: relative;
 }

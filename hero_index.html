@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juan J. Ortiz - Visual Analytics Specialist" />
+    <title>Juan J. Ortiz - Data and Analytics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+      <section class="profile-card" aria-labelledby="profile-name">
+        <img
+          src="./assets/jjoo_bw.JPEG"
+          alt="Juan J. Ortiz"
+          class="avatar"
+          width="200"
+          height="200"
+        />
+        <h1 class="name" id="profile-name">Juan J. Ortiz</h1>
+        <p class="bio">
+          Visualizing data to inspire action and insight.
+        </p>
+        <p class="bio">
+            I design and develop data and analytics applications that enrich analysis and inform decisions. 
+            My focus is on <strong>education</strong> and the use of visual analytics to improve academic success.
+        </p>
+      </section>
+      <blockquote class="quote">
+        <p>"The only way to do great work is to love what you do."</p>
+        <cite>— Steve Jobs</cite>
+      </blockquote>
+    </main>
+    <script src="shapes.js"></script>
+    <script src="shapegenerator.js"></script>
+    <script>
+        generateShapes({
+            element: document.body,
+            options: {
+                colorList: ["#a29bfe","#ff7675","#55efc4","#636e72"],
+                numberOfShapes: 15,
+                mode: 1,
+                rotation: true
+            }
+        });
+    </script>
+</body>
+</html>
