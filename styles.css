@@ -1,86 +1,97 @@
 :root {
   --primary: #4B0082; /* Indigo */
-  --secondary: #FFD700; /* Soft Gold */
+  --secondary: #9DC183; /* Sage Green */
   --dark: #0A2463; /* Deep Navy */
   --light: #E6E6FA; /* Pale Lavender */
-  --font-main: 'Poppins', sans-serif;
-  --font-heading: 'Quicksand', sans-serif;
+  --warm-wood: #D4C4A8; /* Warm Wood - matches wooden elements */
+  --snow: #F8FAFF; /* Snow white */
+  --library-brown: #5E3023; /* Library Brown - rich wood tone */
+  --soft-light-blue: #B8C5C9; /* Soft Light Blue - carpet inspiration */
+  --font-main: 'PT Serif', serif;
+  --font-heading: 'PT Serif', serif;
 }
 
 body {
   font-family: var(--font-main);
-  background-color: var(--dark); /* Deep Navy background */
-  color: var(--light); /* Pale Lavender text */
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-/* Simplified layering */
-main {
+/* Hero Section with Background Image */
+.hero-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
+  min-height: 400px;
+  background-image: url('./assets/background_books.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Avatar styling for hero section */
+/* Content Section */
+.content-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--light);
+  color: var(--library-brown); /* Library Brown #5E3023 text */
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Avatar styling for content section */
 .avatar {
-  border-radius: 50%;
-  border: 3px solid var(--secondary); /* Soft Gold border */
-  width: 150px;
-  height: 150px;
+  border-radius: 16px; /* Rounded corners for modern look */
+  border: none;
+  width: 280px; /* Width */
+  height: 560px; /* Height double the width (140x2 = 280) */
   object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); /* Soft Gold glow */
+  object-position: center; /* Focus on upper body/face */
+  margin-bottom: 30px; /* Increased spacing for taller image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for snow background */
   transition: all 0.3s ease;
   position: relative;
-  z-index: 3; /* Higher than particles (z-index: 0) */
+  z-index: 2;
 }
 
-.avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); /* Enhanced glow on hover */
-  z-index: 4; /* Ensure hover state stays on top */
-}
-
-/* Hero canvas styles */
-#container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 
 .content {
   position: relative;
   z-index: 3; /* Same as avatar, above particles */
-  text-align: center;
+  text-align: left;
   color: var(--light); /* Pale Lavender text */
   max-width: 800px;
-  padding: 20px;
+  padding: 40px;
 }
 
 .content h1 {
   font-size: 3rem;
   margin: 0;
   font-weight: 700;
+  font-family: var(--font-heading); /* Koh Santepheap */
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--library-brown); /* Library Brown heading */
 }
 
 .content p {
   font-size: 1.5rem;
   margin: 10px 0 30px 0;
   opacity: 0.9;
+  font-family: var(--font-main); /* Koh Santepheap for subtext */
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: var(--library-brown); /* Library Brown subtext */
 }
 
 .contact {
@@ -93,13 +104,15 @@ main {
 }
 
 .contact li a {
-  color: var(--secondary); /* Soft Gold links */
+  color: var(--library-brown); /* Library Brown links */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
 .contact li a:hover {
-  color: var(--primary); /* Indigo on hover */
+  color: var(--soft-light-blue); /* Soft Light Blue on hover */
   transform: translateY(-2px);
+  border-bottom: 2px solid var(--soft-light-blue);
 }
