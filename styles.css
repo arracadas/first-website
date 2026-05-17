@@ -1,16 +1,17 @@
 :root {
-  --primary: #4B0082; /* Indigo */
-  --secondary: #9DC183; /* Sage Green */
-  --dark: #0A2463; /* Deep Navy */
-  --light: #E6E6FA; /* Pale Lavender */
-  --warm-wood: #D4C4A8; /* Warm Wood - matches wooden elements */
-  --snow: #F8FAFF; /* Snow white */
-  --library-brown: #5E3023; /* Library Brown - rich wood tone */
-  --soft-light-blue: #B8C5C9; /* Soft Light Blue - carpet inspiration */
-  --font-main: 'PT Serif', serif;
-  --font-heading: 'PT Serif', serif;
+  /* Color Palette */
+  --background: #1C2420;    /* Deep Forest */
+  --headings: #E8A84A;     /* Candle Light */
+  --body: #FAFAF2;         /* Ivory */
+  --accent: #9DC183;       /* Sage Green */
+  --library-brown: #8B4513; /* Library Brown */
+  --light: #FAFAF2;        /* Light text */
+
+  /* Typography */
+  --font-main: 'Lora', serif;
 }
 
+/* Base Styles */
 body {
   font-family: var(--font-main);
   margin: 0;
@@ -20,13 +21,13 @@ body {
   flex-direction: column;
 }
 
-/* Hero Section with Background Image */
+/* Hero Section */
 .hero-section {
   position: relative;
   width: 100%;
-  height: 60vh;
-  min-height: 400px;
-  background-image: url('./assets/background_books.jpg');
+  height: 50vh;
+  min-height: 380px;
+  background-image: url('./assets/background_lights.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -38,9 +39,9 @@ body {
 .content-section {
   position: relative;
   width: 100%;
-  background-color: var(--light);
-  color: var(--library-brown); /* Library Brown #5E3023 text */
-  padding: 60px 20px;
+  background-color: var(--background);
+  color: var(--body);
+  padding: 80px 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -49,27 +50,27 @@ body {
   box-sizing: border-box;
 }
 
-/* Avatar styling for content section */
+/* Avatar */
 .avatar {
-  border-radius: 16px; /* Rounded corners for modern look */
+  border-radius: 16px;
   border: none;
-  width: 280px; /* Width */
-  height: 560px; /* Height double the width (140x2 = 280) */
+  width: 280px;
+  height: 560px;
   object-fit: cover;
-  object-position: center; /* Focus on upper body/face */
-  margin-bottom: 30px; /* Increased spacing for taller image */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for snow background */
+  object-position: center;
+  margin-right: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
 }
 
-
+/* Content Container */
 .content {
   position: relative;
-  z-index: 3; /* Same as avatar, above particles */
+  z-index: 3;
   text-align: left;
-  color: var(--light); /* Pale Lavender text */
+  color: var(--light);
   max-width: 800px;
   padding: 40px;
 }
@@ -77,23 +78,24 @@ body {
 .content h1 {
   font-size: 3rem;
   margin: 0;
-  font-weight: 700;
-  font-family: var(--font-heading); /* Koh Santepheap */
+  font-weight: 600;
+  font-family: var(--font-main);
   letter-spacing: -1px;
   line-height: 1.1;
-  color: var(--library-brown); /* Library Brown heading */
+  color: var(--headings);
 }
 
 .content p {
   font-size: 1.5rem;
-  margin: 10px 0 30px 0;
+  margin: 20px 0 30px;
   opacity: 0.9;
-  font-family: var(--font-main); /* Koh Santepheap for subtext */
+  font-family: var(--font-main);
   font-weight: 400;
   letter-spacing: -0.3px;
-  color: var(--library-brown); /* Library Brown subtext */
+  color: var(--body);
 }
 
+/* Contact Links */
 .contact {
   list-style: none;
   padding: 0;
@@ -104,7 +106,7 @@ body {
 }
 
 .contact li a {
-  color: var(--library-brown); /* Library Brown links */
+  color: var(--library-brown);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
@@ -112,7 +114,7 @@ body {
 }
 
 .contact li a:hover {
-  color: var(--soft-light-blue); /* Soft Light Blue on hover */
+  color: var(--accent);
   transform: translateY(-2px);
-  border-bottom: 2px solid var(--soft-light-blue);
+  border-bottom: 2px solid var(--accent);
 }
