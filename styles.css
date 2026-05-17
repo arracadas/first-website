@@ -4,7 +4,7 @@
   --headings: #E8A84A;     /* Candle Light */
   --body: #FAFAF2;         /* Ivory */
   --accent: #9DC183;       /* Sage Green */
-  --library-brown: #8B4513; /* Library Brown */
+  --library-green: #3D5C46; /* Moss Green */
   --light: #FAFAF2;        /* Light text */
 
   /* Typography */
@@ -86,11 +86,12 @@ body {
 }
 
 .content p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 20px 0 30px;
   opacity: 0.9;
   font-family: var(--font-main);
   font-weight: 400;
+  line-height: 1.5;
   letter-spacing: -0.3px;
   color: var(--body);
 }
@@ -106,7 +107,7 @@ body {
 }
 
 .contact li a {
-  color: var(--library-brown);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s;
@@ -114,7 +115,7 @@ body {
 }
 
 .contact li a:hover {
-  color: var(--accent);
+  color: var(--library-green);
   transform: translateY(-2px);
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--library-green);
 }
