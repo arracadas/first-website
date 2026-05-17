@@ -85,6 +85,16 @@ body {
   color: var(--headings);
 }
 
+.content h4 {
+  font-weight: 400;
+  color: var(--headings);
+  word-spacing: 8px;
+}
+
+.content h4 span {
+  word-spacing: 0px;
+}
+
 .content p {
   font-size: 1.25rem;
   margin: 20px 0 30px;
